@@ -1,0 +1,78 @@
+models: {strong: claude-sonnet-4-6, fast: claude-haiku-4-5-20251001}
+# model provider: anthropic | azure_openai | claude_code
+#   claude_code = shell out to the local `claude` CLI (no API key; uses your
+#   Claude Code login). Set CLAUDE_CODE_BIN to override the binary path.
+provider: relay
+azure_openai:
+  # endpoint + key come from env: AZURE_OPENAI_ENDPOINT (the full Responses-API
+  # URL incl. ?api-version=...) and AZURE_OPENAI_API_KEY — never from this file.
+  # Azure "deployments" play the role of the strong/fast model tiers.
+  # Fill in your deployment names (Azure portal -> your resource -> Deployments);
+  # AZURE_OPENAI_DEPLOYMENT env var is the fallback for both tiers.
+  deployments: {strong: "", fast: ""}
+# USD per million tokens (update alongside model changes)
+pricing:
+  strong: {input_per_mtok: 3.00, output_per_mtok: 15.00}
+  fast: {input_per_mtok: 1.00, output_per_mtok: 5.00}
+  # NOTE: the values above are Claude prices. On azure_openai, set them to your
+  # Azure deployment prices or cost figures in the runlog will be wrong.
+route_back_cap: 2
+budgets: {max_cost_usd_per_page: 3.0, max_minutes_per_page: 15}
+ui_limits: {h1_chars: 60, meta_chars: 155, cta_words: 5}
+
+# ── SEO character limits (enforced by c20_render_critic) ────────────────────
+# Each element has [min, max] character bounds. null = no bound on that side.
+# Generic on-page SEO bounds. Override per brand in brands/<domain>/account.yaml.
+seo_char_limits:
+  title_tag: [40, 60]
+  meta_description: [120, 160]
+  h1: [20, 70]
+  hero_subhead: [60, 180]
+  aio_answer_block: [200, 400]
+  h2: [20, 70]
+  h3: [15, 60]
+  faq_question: [30, 100]
+  faq_answer: [100, 300]
+  paragraph: [null, 600]
+  url_slug: [null, 60]
+  image_alt: [30, 125]
+word_budget: {feature: [1400, 1800], blog-listicle: [1800, 2600], guide: [2000, 3200], comparison: [1500, 2200], glossary: [800, 1400], landing: [600, 1200]}
+rubric_pass_pct: 85
+# SEO research provider for cold mode (c3/c4/c5). semrush uses the Analytics
+# HTTP API with env SEMRUSH_API_KEY (NOT the MCP server); no key ⇒ honest stub.
+research: {provider: semrush, semrush_database: us}
+
+# ── Brand brain (CONTEXT) ───────────────────────────────────────────────────
+# SQLite store of per-brand facts, keywords, site structure, author, prefs, and
+# the agent's pending data_requests. Built by tools/brain.py; edited via the UI.
+brain: {db_path: brand_brain.sqlite}
+
+# ── Tools / data-source resolver (the "hands") ──────────────────────────────
+# Order the resolver tries when it needs data for a page. If none can supply a
+# need AND on_missing == ask_user, the run records a data_request and pauses for
+# the user to fill it in (UI), instead of shipping a thin/[VERIFY] page.
+tools:
+  data_resolver_order: [semrush, mcp, brain]   # tried in order
+  on_missing: ask_user                          # ask_user | stub | fail
+  evidence:                                     # web-fetch/RAG resolver for c13
+    enabled: true
+    max_sources_per_flag: 3
+    fetch_timeout_s: 20
+    allow_domains: []                           # [] = any; else allowlist
+
+# ── GOAL: information-gain gate (see docs/GOAL-information-gain-metrics.md) ──
+quality_gates:
+  enforce_information_gain: true    # ON: a page scoring < pass_score FAILS the critic
+  enforce_min_words: 500            # only enforce on real-length drafts (stubs stay advisory)
+  information_gain:
+    pass_score: 70                  # composite 0–100
+    min_external_citations: 3       # distinct non-owner domains
+    min_distinct_data_points: 5
+    min_original_data_points: 2     # owner's own benchmarks/data, sourced
+    min_examples: 3                 # for example / such as / scenario / walkthrough
+    min_entity_coverage_pct: 80
+    min_questions_answered: 5
+    max_ngram_repeat: 3             # no 3-gram repeated more than this
+    max_keyword_density_pct: 2.5
+    max_brand_mentions_per_words: 120   # ≤ 1 brand mention per N words
+    min_value_sentence_pct: 60      # % sentences carrying fact/data/example

@@ -1,0 +1,11 @@
+langgraph>=1.0
+langgraph-checkpoint-sqlite
+anthropic
+pydantic>=2
+httpx
+beautifulsoup4
+pyyaml
+rich
+pytest
+typing-extensions
+streamlit          # ui/app.py — Brand Brain manager + data-request answering

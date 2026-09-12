@@ -1,0 +1,24 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+runs/
+workspaces/
+*.sqlite
+.env
+.DS_Store
+
+# Per-brand data lives under brands/<domain>/.
+# Run outputs and GSC exports are never committed (bulky / sensitive):
+brands/*/runs/
+brands/*/gsc/
+# Real brand config is private by default — this repo may be public.
+# The example brand below IS committed so the folder convention/template ships.
+brands/*/account.yaml
+brands/*/brand_profile.json
+brands/*/brand_assets.json
+!brands/example.com/account.yaml
+!brands/example.com/brand_profile.json
+!brands/example.com/brand_assets.json
+brands/*/inputs/

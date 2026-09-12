@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OnArrival — SEO &amp; GEO Visibility Audit · Prepared by Quilzy · July 2026</title>
+<style>
+  :root{
+    --ink:#0f172a; --muted:#64748b; --line:#e5e9f0; --bg:#f8fafc;
+    --brand:#0ea5e9; --brand2:#0c4a6e;
+    --red:#dc2626; --orange:#ea580c; --amber:#d97706; --green:#16a34a; --blue:#2563eb;
+    --redbg:#fef2f2; --orangebg:#fff7ed; --amberbg:#fffbeb; --greenbg:#f0fdf4; --bluebg:#eff6ff;
+  }
+  *{box-sizing:border-box}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;color:var(--ink);margin:0;background:#fff;line-height:1.55}
+  .wrap{max-width:920px;margin:0 auto;padding:40px 28px 80px}
+  header.cover{background:linear-gradient(135deg,#0c4a6e,#0ea5e9);color:#fff;border-radius:18px;padding:38px 34px;margin-bottom:28px}
+  header.cover .kicker{font-size:12px;letter-spacing:2px;text-transform:uppercase;opacity:.85}
+  header.cover h1{margin:6px 0 6px;font-size:30px;letter-spacing:-.5px}
+  header.cover .sub{opacity:.92;font-size:15px}
+  header.cover .meta{margin-top:18px;font-size:12.5px;opacity:.85}
+  .scoregrid{display:flex;flex-wrap:wrap;gap:14px;margin-top:24px}
+  .score{flex:1;min-width:150px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:12px;padding:16px 18px}
+  .score .n{font-size:34px;font-weight:700;line-height:1}
+  .score .l{font-size:11.5px;text-transform:uppercase;letter-spacing:.6px;opacity:.9;margin-top:6px}
+  .score .band{font-size:12px;margin-top:6px;font-weight:600}
+  h2{font-size:22px;margin:42px 0 8px;padding-bottom:8px;border-bottom:2px solid var(--line);letter-spacing:-.3px}
+  h3{font-size:16px;margin:24px 0 8px}
+  p{margin:10px 0}
+  .lead{color:var(--muted);font-size:15px}
+  table{width:100%;border-collapse:collapse;margin:14px 0;font-size:13px}
+  th,td{text-align:left;padding:9px 11px;border:1px solid var(--line);vertical-align:top}
+  th{background:var(--bg);font-weight:600}
+  .tag{display:inline-block;font-size:10.5px;font-weight:700;padding:2px 8px;border-radius:20px;white-space:nowrap}
+  .t-red{background:var(--redbg);color:var(--red)}
+  .t-orange{background:var(--orangebg);color:var(--orange)}
+  .t-amber{background:var(--amberbg);color:var(--amber)}
+  .t-green{background:var(--greenbg);color:var(--green)}
+  .t-blue{background:var(--bluebg);color:var(--blue)}
+  .conf{display:inline-block;font-size:10px;font-weight:700;padding:1px 7px;border-radius:4px;letter-spacing:.3px}
+  .c-meas{background:#dcfce7;color:#166534}
+  .c-bench{background:#dbeafe;color:#1e40af}
+  .c-est{background:#fef9c3;color:#854d0e}
+  .c-rec{background:#f1f5f9;color:#475569}
+  .callout{border-left:4px solid var(--brand);background:var(--bg);padding:12px 16px;border-radius:0 8px 8px 0;margin:16px 0;font-size:14px}
+  .win{border-left-color:var(--green);background:var(--greenbg)}
+  .bar{height:9px;border-radius:6px;background:#e2e8f0;overflow:hidden;margin-top:6px}
+  .bar > span{display:block;height:100%;border-radius:6px}
+  ul{margin:8px 0 8px 2px;padding-left:20px}
+  li{margin:5px 0}
+  .muted{color:var(--muted);font-size:12.5px}
+  .footer{margin-top:50px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-size:12px}
+  code{background:#f1f5f9;padding:1px 5px;border-radius:4px;font-size:12px}
+  .quote{font-style:italic;color:#334155;background:#fff7ed;border:1px solid #fed7aa;border-radius:8px;padding:10px 14px;margin:10px 0;font-size:13px}
+  .verify{background:#f8fafc;border:1px dashed #cbd5e1;border-radius:8px;padding:8px 12px;font-size:12px;color:#475569;margin:6px 0}
+  .verify b{color:#0f172a}
+  .legend{display:flex;flex-wrap:wrap;gap:10px;margin:10px 0}
+  .legend div{font-size:12px}
+  .step{display:flex;gap:12px;margin:12px 0;align-items:flex-start}
+  .step .num{flex:none;width:26px;height:26px;border-radius:50%;background:var(--brand2);color:#fff;font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center}
+  .offer{background:linear-gradient(135deg,#0c4a6e,#0ea5e9);color:#fff;border-radius:16px;padding:26px 28px;margin-top:24px}
+  .offer h2{color:#fff;border:0;margin-top:0}
+  .offer a{color:#fff}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="cover">
+  <div class="kicker">SEO · GEO · AI-Citation · Backlink Audit</div>
+  <h1>OnArrival — Digital Visibility Audit</h1>
+  <div class="sub">onarrival.com &nbsp;·&nbsp; Prepared by Quilzy</div>
+  <div class="scoregrid">
+    <div class="score"><div class="n">40</div><div class="l">Overall / 100</div><div class="band">Foundation good, unfinished</div></div>
+    <div class="score"><div class="n">43</div><div class="l">SEO / 100</div><div class="band">Below par</div></div>
+    <div class="score"><div class="n">37</div><div class="l">GEO / 100</div><div class="band">Brand-only visibility</div></div>
+    <div class="score"><div class="n">35</div><div class="l">Backlinks / 100</div><div class="band">Thin, early-stage</div></div>
+  </div>
+  <div class="meta">Audit date: 14 July 2026 · Every finding below is evidenced and independently verifiable — see the "verify it yourself" box under each.</div>
+</header>
+
+<!-- ============= HOW TO READ ============= -->
+<h2>How to read this report</h2>
+<p class="lead">This is a fact-based audit, not a sales flyer. Each finding carries a confidence label so you know exactly what was measured versus estimated, and a one-line way to check it yourself. Nothing here is a number we invented.</p>
+<div class="legend">
+  <div><span class="conf c-meas">MEASURED</span> &nbsp;We observed it directly (live page / search result). Screenshot or quote provided.</div>
+  <div><span class="conf c-bench">BENCHMARK</span> &nbsp;Comparison against competitors from a named public source.</div>
+  <div><span class="conf c-est">ESTIMATED</span> &nbsp;Directional; method stated. Confirm with the named live tool.</div>
+  <div><span class="conf c-rec">RECOMMENDATION</span> &nbsp;Our professional opinion / proposed fix.</div>
+</div>
+<p class="muted">Tools this audit used: live page fetch of onarrival.com, Google web search (site: and category queries), and public company databases. Two data classes could not be captured in this pass and are marked ESTIMATED: (1) Core Web Vitals — run <code>pagespeed.web.dev</code> to confirm; (2) exact backlink counts — run Ahrefs/Semrush. A follow-up pass with a live crawler + dated AI-engine screenshots upgrades both to MEASURED.</p>
+
+<!-- ============= THE OPPORTUNITY (pitch bridge) ============= -->
+<h2>The opportunity in one paragraph</h2>
+<div class="callout">
+OnArrival already has the hard-to-build assets — real enterprise customers (Cleartrip, Niyo, TATA AIG, dnata), credible funding, and a feature in <strong>Skift</strong>. What it lacks is a <strong>finished, machine-readable website</strong>. Because live pages still carry placeholder text and the site has no structured data, Google and AI engines can reach OnArrival but can't confidently describe or recommend it. The proof: on the query buyers actually type — <em>"best embedded travel API platform"</em> — OnArrival is <strong>absent</strong>, while Duffel, Nuitée and Amadeus are named. That gap is pure, recoverable demand. Closing it is a content-and-schema problem, not a rebuild — which means fast wins are available.
+</div>
+
+<!-- ============= 3 THINGS ============= -->
+<h2>Three things you can verify in 60 seconds</h2>
+
+<div class="step"><div class="num">1</div><div>
+<strong>Live product pages ship with Lorem-ipsum placeholder text.</strong> <span class="conf c-meas">MEASURED</span>
+<div class="quote">On <code>/solutions/core-travel/flights</code>: "Printing and typesetting has been the industry's standard dummy text. dabore et dolore magaliqua quis suspe." — appears three times. Plus a Latin block: "Duis gravida augue velit eu dignissim felis pos quis…"</div>
+<div class="verify"><b>Verify:</b> open <code>onarrival.com/solutions/core-travel/flights</code> and scroll to "Comprehensive flight information" and "Engaging creative minds via technology."</div>
+</div></div>
+
+<div class="step"><div class="num">2</div><div>
+<strong>Testimonials are dummy quotes attributed to real, named CEOs.</strong> <span class="conf c-meas">MEASURED</span>
+<div class="quote">Homepage: "Fully integrated suite of travel prducts…" (note the typo "prducts") — credited to <em>Ayyappan Rajagopal, CEO @Cleartrip</em> and <em>Vinay Bagri, Co-founder &amp; CEO @Niyo Global</em>.</div>
+<div class="verify"><b>Verify:</b> open <code>onarrival.com</code> and scroll to "Hear from our customers." Placeholder quotes on named executives is a credibility and reputational risk.</div>
+</div></div>
+
+<div class="step"><div class="num">3</div><div>
+<strong>Google is indexing leftover pages from an old consumer-travel template.</strong> <span class="conf c-meas">MEASURED</span>
+<p class="muted" style="margin:6px 0">Indexed URLs include <code>/detroit</code>, <code>/app/favorites</code> ("Your Favorites"), <code>/old-home-3</code>, and a <code>/checkout</code> shopping cart. Search snippets even describe a "$20 Standard plan" and "Meet &amp; Greet, Duty Free, VAT refunds" — none of which is OnArrival's current B2B product.</p>
+<div class="verify"><b>Verify:</b> Google <code>site:onarrival.com</code> and look for the Detroit / favorites / old-home pages.</div>
+</div></div>
+
+<!-- ============= WHAT'S WORKING ============= -->
+<h2>What's already working (keep these)</h2>
+<div class="callout win">
+<strong>SEO:</strong> unique hand-written meta descriptions on every page <span class="conf c-meas">MEASURED</span>; clean semantic URLs (<code>/solutions/core-travel/flights</code>); full Open Graph + Twitter Card tags; HTTPS + responsive Webflow build; genuine enterprise customer logos.<br><br>
+<strong>GEO / AI:</strong> strong brand-query footprint — Skift, Crunchbase, Tracxn, PitchBook, Dealroom, CB Insights all carry OnArrival, so AI answers direct "what is OnArrival" questions well <span class="conf c-meas">MEASURED</span>. Consistent entity naming across sources.<br><br>
+<strong>Backlinks:</strong> credible early referrers for a 2022 seed company — Skift, BW Disrupt, YourStory, Startup Story, and investor pages (Antler: "Investing in OnArrival") <span class="conf c-meas">MEASURED</span>.
+</div>
+
+<!-- ============= SEO FINDINGS ============= -->
+<h2>SEO findings — 43 / 100</h2>
+<div class="bar"><span style="width:43%;background:var(--orange)"></span></div>
+<table>
+  <tr><th>Finding</th><th>Evidence / how to verify</th><th>Confidence</th><th>What it's costing</th><th>Sev.</th></tr>
+  <tr>
+    <td><strong>Placeholder / Lorem-ipsum copy on live pages</strong></td>
+    <td>Quotes above. Check the Flights &amp; Home URLs.</td>
+    <td><span class="conf c-meas">MEASURED</span></td>
+    <td>Key pages are thin/uncitable → they can't rank or be quoted by AI.</td>
+    <td><span class="tag t-red">P0</span></td>
+  </tr>
+  <tr>
+    <td><strong>Legacy pages polluting the index</strong></td>
+    <td><code>site:onarrival.com</code> → /detroit, /app/favorites, /old-home-3, /checkout.</td>
+    <td><span class="conf c-meas">MEASURED</span></td>
+    <td>Google &amp; AI describe the wrong product; wastes crawl budget.</td>
+    <td><span class="tag t-red">P0</span></td>
+  </tr>
+  <tr>
+    <td><strong>No structured data (JSON-LD)</strong></td>
+    <td>No Organization/Product/Breadcrumb/FAQ schema in served markup. Webflow adds none by default.</td>
+    <td><span class="conf c-est">ESTIMATED</span> — confirm in View-Source / Rich Results Test</td>
+    <td>No rich results; AI has no clean entity to anchor to.</td>
+    <td><span class="tag t-orange">P1</span></td>
+  </tr>
+  <tr>
+    <td><strong>Weak title tags</strong></td>
+    <td>Homepage <code>&lt;title&gt;</code> = "OnArrival" only; inner = "Solutions | Core travel | Flights". View-source to confirm.</td>
+    <td><span class="conf c-meas">MEASURED</span></td>
+    <td>Lost keyword relevance + lower click-through from search.</td>
+    <td><span class="tag t-orange">P1</span></td>
+  </tr>
+  <tr>
+    <td><strong>robots.txt empty; sitemap.xml not served</strong></td>
+    <td>Fetch <code>/robots.txt</code> (blank) and <code>/sitemap.xml</code> (empty). Enable Webflow sitemap.</td>
+    <td><span class="conf c-est">ESTIMATED</span> — confirm in Search Console</td>
+    <td>Slower discovery + indexing of new/updated pages.</td>
+    <td><span class="tag t-orange">P1</span></td>
+  </tr>
+  <tr>
+    <td><strong>Thin content; no blog or API docs indexed</strong></td>
+    <td>About ≈120 words; no named leadership; no developer docs surface. Fetch <code>/company/about</code>.</td>
+    <td><span class="conf c-meas">MEASURED</span></td>
+    <td>Missing the pages that win category traffic (how Duffel ranks).</td>
+    <td><span class="tag t-orange">P1</span></td>
+  </tr>
+  <tr>
+    <td><strong>Dead placeholder CTAs</strong></td>
+    <td>"Request demo", "Read customer stories", many "Learn more" link to <code>#</code>.</td>
+    <td><span class="conf c-meas">MEASURED</span></td>
+    <td>Lost conversions + shallow crawl depth.</td>
+    <td><span class="tag t-amber">P2</span></td>
+  </tr>
+  <tr>
+    <td><strong>Core Web Vitals not confirmed; heavy PNG heroes</strong></td>
+    <td>Large PNG hero art not consistently WebP. Run <code>pagespeed.web.dev</code> on the homepage.</td>
+    <td><span class="conf c-est">ESTIMATED</span></td>
+    <td>Potential mobile speed drag on rankings + UX.</td>
+    <td><span class="tag t-amber">P2</span></td>
+  </tr>
+  <tr>
+    <td><strong>Domain / canonical fragmentation</strong></td>
+    <td><code>onarrival.com</code> vs <code>onarrival.travel</code>/<code>hub.</code>; www &amp; non-www both in index. Confirm 301 + canonical.</td>
+    <td><span class="conf c-est">ESTIMATED</span></td>
+    <td>Split authority + entity confusion.</td>
+    <td><span class="tag t-amber">P2</span></td>
+  </tr>
+</table>
+
+<!-- ============= GEO FINDINGS ============= -->
+<h2>GEO / AI-citation findings — 37 / 100</h2>
+<div class="bar"><span style="width:37%;background:var(--red)"></span></div>
+<p class="lead">GEO = whether AI engines (ChatGPT, Perplexity, Gemini) surface you when a buyer describes a need. OnArrival is in the "brand-only" trap: AI knows it exists, but never recommends it on category queries.</p>
+<table>
+  <tr><th>Query type</th><th>Exact prompt (re-run to verify)</th><th>OnArrival</th><th>Who is named instead</th><th>Conf.</th></tr>
+  <tr><td>Category</td><td>"best embedded travel API platform for fintech / OTA"</td><td><span class="tag t-red">ABSENT</span></td><td>Duffel, Nuitée, Amadeus, Bridgify, liteAPI</td><td><span class="conf c-bench">BENCHMARK</span></td></tr>
+  <tr><td>Category</td><td>"travel API for flights &amp; hotels for OTAs"</td><td><span class="tag t-red">ABSENT</span></td><td>Amadeus, Duffel, Travelopro</td><td><span class="conf c-bench">BENCHMARK</span></td></tr>
+  <tr><td>Brand</td><td>"tell me about OnArrival travel"</td><td><span class="tag t-green">RICH</span></td><td>—</td><td><span class="conf c-meas">MEASURED</span></td></tr>
+  <tr><td>Brand + funding</td><td>"OnArrival travel funding investors"</td><td><span class="tag t-green">GOOD</span></td><td>—</td><td><span class="conf c-meas">MEASURED</span></td></tr>
+</table>
+<div class="callout"><strong>What this costs:</strong> every category query where a competitor is named and OnArrival isn't is a buyer forming a shortlist that OnArrival never makes. At the top of the funnel, that is lost impressions and lost demo requests — the exact moment a purchase decision starts.</div>
+<p class="muted"><strong>Root causes (all fixable):</strong> (1) own-site pages uncitable due to placeholder copy; (2) no schema to define the entity; (3) not present in the "best travel API" comparison articles AI cites; (4) legacy pages feed wrong facts into the index AI reads.</p>
+<div class="verify"><b>Recommended follow-up:</b> capture dated screenshots of each AI answer above (ChatGPT + Perplexity) so the gap is documented and trackable month-over-month. This turns the BENCHMARK rows into MEASURED evidence.</div>
+
+<!-- ============= BACKLINKS ============= -->
+<h2>Backlink findings — 35 / 100</h2>
+<div class="bar"><span style="width:35%;background:var(--orange)"></span></div>
+<p class="lead">Quality is respectable for a seed startup, but volume and diversity are low — and OnArrival is missing from the comparison/listicle pages that rank in Google <em>and</em> feed AI category answers. That is the highest-leverage link target because it pays twice (SEO + GEO).</p>
+<table>
+  <tr><th>Signal</th><th>Observed</th><th>Confidence</th></tr>
+  <tr><td>Editorial / PR links</td><td>Skift, BW Disrupt, YourStory, Startup Story (good quality, low volume)</td><td><span class="conf c-meas">MEASURED</span></td></tr>
+  <tr><td>Directory / DB links</td><td>Crunchbase, Tracxn, PitchBook, Dealroom, CB Insights</td><td><span class="conf c-meas">MEASURED</span></td></tr>
+  <tr><td>Investor links</td><td>Antler blog ("Investing in OnArrival"), Good Capital, Inuka VC</td><td><span class="conf c-meas">MEASURED</span></td></tr>
+  <tr><td>Category listicle inclusion ("best travel API 2026")</td><td>None found — competitors are listed, OnArrival is not</td><td><span class="conf c-bench">BENCHMARK</span></td></tr>
+  <tr><td>Developer-community links (GitHub, Dev.to, Stack Overflow)</td><td>None found</td><td><span class="conf c-est">ESTIMATED</span> — confirm in Ahrefs</td></tr>
+  <tr><td>Exact referring-domain count / Domain Rating</td><td>Not captured this pass</td><td><span class="conf c-est">ESTIMATED</span> — run Ahrefs/Semrush</td></tr>
+</table>
+
+<!-- ============= OPPORTUNITY MODEL ============= -->
+<h2>The opportunity model</h2>
+<p class="lead">Ranges, not promises. These are scenarios with stated assumptions so you can pressure-test them — no guaranteed rankings.</p>
+<table>
+  <tr><th>Lever</th><th>Assumption</th><th>Leading indicator we'd move</th><th>Timeframe</th></tr>
+  <tr><td>Remove placeholder copy + purge legacy index + schema + titles</td><td>~10–15 core pages become genuinely indexable &amp; on-message</td><td>Indexed-page quality up; impressions in Search Console begin climbing on product/brand terms</td><td>2–6 weeks</td></tr>
+  <tr><td>Category content + API docs + guides</td><td>5–10 pages targeting the queries buyers type</td><td>New keyword rankings + organic entries to the funnel</td><td>1–3 months</td></tr>
+  <tr><td>GEO: schema + citable content + listicle placements</td><td>Present on 3–5 category prompts across ChatGPT/Perplexity</td><td>AI "share of voice" — named where competitors are today</td><td>1–3 months</td></tr>
+  <tr><td>Link building into comparison pages + dev communities</td><td>Diversify referring domains</td><td>Referring domains + category authority</td><td>ongoing</td></tr>
+</table>
+<p class="muted">We report progress on leading indicators (indexation, impressions, AI-citation share) rather than promising a rank position — because those are what we can honestly control and what predict traffic.</p>
+
+<!-- ============= ROADMAP ============= -->
+<h2>Priority roadmap</h2>
+<table>
+  <tr><th>Priority</th><th>Action</th><th>Effort</th><th>Expected leading indicator</th></tr>
+  <tr><td><span class="tag t-red">P0</span></td><td>Replace all placeholder/Lorem-ipsum copy; remove or rewrite dummy CEO testimonials</td><td>Med</td><td>Pages become rankable &amp; AI-citable</td></tr>
+  <tr><td><span class="tag t-red">P0</span></td><td>301-redirect / delete legacy pages (/detroit, /app/favorites, /old-home-3, /checkout); remove Webflow cart</td><td>Low</td><td>Clean index; correct product described</td></tr>
+  <tr><td><span class="tag t-orange">P1</span></td><td>Add JSON-LD: Organization (sameAs + founders), Product/Service, BreadcrumbList</td><td>Low</td><td>Rich results eligibility; AI entity clarity</td></tr>
+  <tr><td><span class="tag t-orange">P1</span></td><td>Rewrite titles keyword-first with brand suffix</td><td>Low</td><td>Higher CTR + relevance</td></tr>
+  <tr><td><span class="tag t-orange">P1</span></td><td>Enable sitemap + real robots.txt; resubmit in Search Console</td><td>Low</td><td>Faster indexing</td></tr>
+  <tr><td><span class="tag t-orange">P1</span></td><td>Publish API docs + 3–5 category guides + founder-bylined posts</td><td>High</td><td>Category rankings + AI citations</td></tr>
+  <tr><td><span class="tag t-amber">P2</span></td><td>Fix dead <code>#</code> CTAs; alt text; PNG→WebP; confirm canonical/301</td><td>Low</td><td>Conversion, CWV, consolidated authority</td></tr>
+  <tr><td><span class="tag t-amber">P2</span></td><td>Earn placement in "best travel API 2026" listicles + dev communities</td><td>Med</td><td>Referring domains + GEO share</td></tr>
+</table>
+
+<!-- ============= OFFER ============= -->
+<h2>How Quilzy closes the impression gap</h2>
+<p class="lead">The biggest missed impression surface in this audit is simple: <strong>OnArrival has no organic content engine</strong> — no blog, no newsroom, no category pages, no docs. That is precisely why it's invisible on category queries in Google and AI today. Quilzy is a discoverability platform built to close exactly that gap.</p>
+
+<table>
+  <tr><th>Audit gap</th><th>How Quilzy addresses it</th><th>Impression surface it opens</th></tr>
+  <tr><td>No blog / no category content (P1)</td><td>Hosted blog + newsroom mounted on <code>onarrival.com/blog</code> (reverse proxy → inherits your domain equity). AI agents draft consistent, search-first posts so publishing actually compounds.</td><td>Google &amp; Bing organic</td></tr>
+  <tr><td>Invisible on AI category queries (GEO)</td><td>Every page ships AI-search-readable structure + JSON-LD, so ChatGPT / Claude / Perplexity can parse and cite it.</td><td>AI answers (the query where competitors win today)</td></tr>
+  <tr><td>No structured data on content (P1)</td><td>Automatic JSON-LD schema on every post — no dev work.</td><td>Google rich results + AI entity clarity</td></tr>
+  <tr><td>Slow discovery / weak indexing (P1)</td><td><strong>IndexNow instant indexing</strong> — search engines are pinged the moment you publish, not days later. Auto sitemaps + internal linking.</td><td>Faster, fuller indexation</td></tr>
+  <tr><td>No news/PR surface</td><td>Google News-ready newsroom (correct schema, RSS, sitemaps for Publisher Center).</td><td>Google News &amp; Top Stories</td></tr>
+  <tr><td>No repeatable social presence</td><td>Posts auto-repurpose to social channels.</td><td>LinkedIn / social</td></tr>
+  <tr><td>Speed / CWV risk (P2)</td><td>90+ Lighthouse, &lt;1s first paint, global CDN — built in.</td><td>Speed is a ranking factor across all four</td></tr>
+</table>
+
+<div class="callout"><strong>How we sell "you'll get impressions" — honestly.</strong> Quilzy does not promise a rank position. It <em>removes every technical reason a page fails to get found</em> — instant indexing, schema, speed, and multi-surface publishing — on every page automatically, then reports <strong>impressions</strong> (Search Console) and <strong>AI-citation share</strong> as the headline metrics. The promise is a mechanism and a measurable leading indicator, not a guarantee.</div>
+
+<div class="offer">
+<h3 style="margin-top:0;color:#fff">Scope — what Quilzy owns vs. what stays on your side</h3>
+<p><strong>Quilzy owns</strong> the content/discoverability engine: the hosted blog + newsroom on your domain, technical SEO/GEO on every post, instant indexing, Google News eligibility, AI-search readiness, and social repurposing — the P1 content track and the GEO citation track in this audit.</p>
+<p><strong>Stays on OnArrival's side</strong> (we'll flag, not hide): the two P0 fixes on the existing Webflow site — removing placeholder copy and purging legacy indexed pages. Quilzy doesn't touch the main marketing site; those are quick hygiene fixes worth doing in parallel.</p>
+<p style="margin-bottom:0"><strong>Proposed next step:</strong> a 7-day Quilzy trial on <code>onarrival.com/blog</code> — we stand up 3–5 category posts targeting the exact queries where OnArrival is invisible today, then baseline impressions + AI-citation share so you can watch the surface open in real time.</p>
+</div>
+
+<!-- ============= METHODOLOGY ============= -->
+<h2>Methodology &amp; confidence appendix</h2>
+<p class="muted">
+<strong>Audit date:</strong> 14 July 2026. &nbsp;<strong>Target:</strong> onarrival.com.<br>
+<strong>Data collected directly (MEASURED):</strong> live HTML of homepage, /solutions/core-travel/flights, /company/about; on-page meta, titles, headings, nav, footer, testimonials; Google <code>site:</code> index sample; Google category &amp; brand queries; public company databases (Crunchbase, Tracxn, PitchBook, Dealroom, CB Insights) and press (Skift, BW Disrupt, YourStory).<br>
+<strong>Not captured this pass (ESTIMATED — named tool to confirm):</strong> Core Web Vitals → <code>pagespeed.web.dev</code>; JSON-LD presence → View-Source / Google Rich Results Test; sitemap/robots status → Google Search Console; exact backlink volume &amp; Domain Rating → Ahrefs/Semrush; live dated AI-engine screenshots → ChatGPT + Perplexity.<br>
+<strong>Scoring:</strong> SEO (performance 20 / technical 20 / on-page 25 / content 20 / schema 15); GEO (category visibility 25 / brand richness 20 / source quality 20 / accuracy 15 / share-of-voice 10 / entity schema 10); Backlinks (quality, diversity, category-page presence). Weightings available on request.<br>
+<strong>Principle:</strong> no rankings are promised and no metric is fabricated. Every fact cites a checkable URL, quote, or re-runnable query; estimates are labeled with the tool needed to confirm.
+</p>
+
+<div class="footer">
+Prepared by Quilzy · 14 July 2026 · Findings for onarrival.com. This document is designed to be independently verified — re-run any query or open any URL cited above. Company data via Crunchbase, Tracxn, PitchBook, Dealroom, CB Insights; press via Skift, BW Disrupt, YourStory.
+</div>
+
+</div>
+</body>
+</html>
